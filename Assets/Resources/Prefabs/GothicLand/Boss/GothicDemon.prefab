@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9056794063526438065}
   - component: {fileID: 8072857484240086570}
   - component: {fileID: 6475110477296399136}
+  - component: {fileID: -8869371063529534253}
   m_Layer: 0
   m_Name: GothicDemon
   m_TagString: Untagged
@@ -106,3 +107,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &-8869371063529534253
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432588441684398089}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 85cad91c2d1c864498f7b8818559a76b, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3434977322743608969}
   - component: {fileID: 7473048638940750493}
   - component: {fileID: 1908422995733525140}
+  - component: {fileID: -2557345223582592093}
   m_Layer: 0
   m_Name: HellBeast
   m_TagString: Untagged
@@ -106,3 +107,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &-2557345223582592093
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228529557877892258}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 56e7d64ff316ff54abc5fe3fcb03fc51, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

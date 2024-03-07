@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4287468487150986726}
   - component: {fileID: 7065913603903421106}
   - component: {fileID: 8148715329999177263}
+  - component: {fileID: -8252088888818273987}
   m_Layer: 0
   m_Name: SkullFire
   m_TagString: Untagged
@@ -106,3 +107,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &-8252088888818273987
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3728441668342175573}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 894b2e5488b2c3942bfb427dfd67762c, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
