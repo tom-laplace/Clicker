@@ -13,7 +13,7 @@ public class MobSpawner : MonoBehaviour
 
     public void SpawnMonster(GameObject monster)
     {
-        spawnedMonster = Instantiate(monster, new Vector3(6, -1, 0), Quaternion.identity);
+        spawnedMonster = Instantiate(monster, new Vector3(8, -2.5f, 0), Quaternion.identity);
         spawnedMonster.AddComponent<MonsterController>();
     }
 }
