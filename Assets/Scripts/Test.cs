@@ -39,8 +39,8 @@ public class Test : MonoBehaviour
                 mobSpawner.SpawnMonster(biomeController.boss[0]);
 
                 // On augmente le lvl du biome pour charger les ressources du prochain biome 
-                // biomeController.biomeLevel++;
-                // biomeController.LoadResourcesFromBiomeLevel(gameObject.GetComponent<BiomeController>().biomeLevel);
+                biomeController.biomeLevel++;
+                biomeController.LoadResourcesFromBiomeLevel(gameObject.GetComponent<BiomeController>().biomeLevel);
 
                 // On repasse l'index a 0 pour recommencer le cycle de monstres 
                 index = 0;
