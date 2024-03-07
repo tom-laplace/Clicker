@@ -37,7 +37,12 @@ public class MonsterController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             TakeDamage(characterController.damage);
-            gameManager.HandleMonsterSpawn(health);
+        }
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+            gameManager.HandleMonsterSpawn();
         }
     }
 

@@ -25,33 +25,30 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void HandleMonsterSpawn(float monsterHealth)
+    public void HandleMonsterSpawn()
     {
-        if (monsterHealth <= 0)
+        level += 1;
+        characterController.EarnMoney();
+        // Index inférieur à 4 pour ne pas spawn le boss et éviter l'index out of range
+        if (mobIndex < 4)
         {
-            level += 1;
-            characterController.EarnMoney();
-            // Index inférieur à 4 pour ne pas spawn le boss et éviter l'index out of range
-            if (mobIndex < 4)
-            {
-                mobSpawner.SpawnMonster(biomeController.monsters[mobIndex]);
-                mobIndex++;
-            }
-            else
-            {   
-                mobSpawner.SpawnMonster(biomeController.boss[0]);
+            mobSpawner.SpawnMonster(biomeController.monsters[mobIndex]);
+            mobIndex++;
+        }
+        else
+        {
+            mobSpawner.SpawnMonster(biomeController.boss[0]);
 
-                // On augmente le lvl du biome pour charger les ressources du prochain biome 
-                // biomeController.biomeLevel++;
-                // biomeController.LoadResourcesFromBiomeLevel(gameObject.GetComponent<BiomeController>().biomeLevel);
+            // On augmente le lvl du biome pour charger les ressources du prochain biome 
+            biomeController.biomeLevel++;
+            biomeController.LoadResourcesFromBiomeLevel(gameObject.GetComponent<BiomeController>().biomeLevel);
 
-                // On repasse l'index a 0 pour recommencer le cycle de monstres 
-                mobIndex = 0;
-            }
+            // On repasse l'index a 0 pour recommencer le cycle de monstres 
+            mobIndex = 0;
         }
     }
-    
+
 }
