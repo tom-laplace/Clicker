@@ -22,6 +22,10 @@ public class BiomeController : MonoBehaviour
                 monsters = Resources.LoadAll<GameObject>("Prefabs/GolemLand/Monsters");
                 boss = Resources.LoadAll<GameObject>("Prefabs/GolemLand/Boss");
                 break;
+            case 2:
+                monsters = Resources.LoadAll<GameObject>("Prefabs/WarriorsLand/Monsters");
+                boss = Resources.LoadAll<GameObject>("Prefabs/WarriorsLand/Boss");
+                break;
             default:
                 monsters = Resources.LoadAll<GameObject>("Prefabs/GothicLand/Monsters");
                 boss = Resources.LoadAll<GameObject>("Prefabs/GothicLand/Boss"); 
