@@ -495,80 +495,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &958798324
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 958798328}
-  - component: {fileID: 958798327}
-  - component: {fileID: 958798326}
-  - component: {fileID: 958798325}
-  m_Layer: 0
-  m_Name: BiomeManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &958798325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958798324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e2163b73bf0fc4f9dde9cdc6162176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsters: []
-  boss: []
-  biomeLevel: 0
---- !u!114 &958798326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958798324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59ee933e98fac6c4981b8f058e07ec72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnedMonster: {fileID: 0}
---- !u!114 &958798327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958798324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fbcc8e984af2ae4eb6f72de1889a777, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &958798328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958798324}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6638683, y: 0.73598886, z: 0.0035564536}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1428428697
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +746,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1658219847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3401651869984353454, guid: 4ce77a47aa4859c47bc32960c87ca776, type: 3}
+  m_PrefabInstance: {fileID: 1795286269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1658219851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658219847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6387e804d2f4ab418c8fa551535013f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  money: 0
+  gameManager: {fileID: 0}
 --- !u!1 &1708177973
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +807,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1778765992}
   - component: {fileID: 1778765993}
+  - component: {fileID: 1778765995}
+  - component: {fileID: 1778765994}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -896,6 +844,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+--- !u!114 &1778765994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778765991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ee933e98fac6c4981b8f058e07ec72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnedMonster: {fileID: 0}
+--- !u!114 &1778765995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778765991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e2163b73bf0fc4f9dde9cdc6162176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsters: []
+  boss: []
+  biomeLevel: 0
 --- !u!1001 &1795286269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -951,7 +927,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3401651869984353454, guid: 4ce77a47aa4859c47bc32960c87ca776, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1658219851}
   m_SourcePrefab: {fileID: 100100000, guid: 4ce77a47aa4859c47bc32960c87ca776, type: 3}
 --- !u!1 &1850338085
 GameObject:

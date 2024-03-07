@@ -26,7 +26,8 @@ public class MonsterController : MonoBehaviour
         maxHealth = 100 * (float)Math.Pow(1.1, gameManager.level);
         health = maxHealth;
         healthBarUI.SetMaxHealth(health);
-        healthBarUI.setHealth(health);
+        healthBarUI.SetHealth(health);
+        Debug.Log("Monster health: " + health);
     }
 
     // Update is called once per frame
@@ -36,13 +37,7 @@ public class MonsterController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             TakeDamage(characterController.damage);
-            if(health <= 0)
-            {
-                characterController.EarnMoney();
-                gameManager.UpgradeLevel();
-                DestroyMonster();
-                CreateMonster();
-            }
+            gameManager.HandleMonsterSpawn(health);
         }
     }
 
@@ -50,16 +45,6 @@ public class MonsterController : MonoBehaviour
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
-        healthBarUI.setHealth(health);
-    }
-
-    private void DestroyMonster()
-    {
-        Destroy(gameObject);
-    }
-
-    private void CreateMonster()
-    {
-        Instantiate(gameObject);
+        healthBarUI.SetHealth(health);
     }
 }

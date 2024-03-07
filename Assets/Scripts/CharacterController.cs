@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
     public GameManager gameManager;
 
     private TMPro.TextMeshProUGUI moneyText;
+    
 
     //SerializeField MoneyAmount TextMesh object
 
@@ -39,7 +40,10 @@ public class CharacterController : MonoBehaviour
 
     public void EarnMoney()
     {
-        money *= (float)Math.Pow(1.1, gameManager.level);
-        moneyText.text = money.ToString();
+        if(money == 0){
+            money = gameManager.level;
+        }
+        money += gameManager.level * 1.1f;
+        moneyText.text = Math.Round(money).ToString();
     }
 }

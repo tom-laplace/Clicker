@@ -13,7 +13,7 @@ public class HealthBarUI : MonoBehaviour
         MaxHealth = maxHealth;
     }
 
-    public void setHealth(float health)
+    public void SetHealth(float health)
     {
         Health = health;
         healthBar.sizeDelta = new Vector2(Health / MaxHealth * Width, Height);
