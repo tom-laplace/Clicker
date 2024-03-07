@@ -18,6 +18,10 @@ public class Test : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            HandleMonsterSpawn(0);
+        }
     }
 
     public void HandleMonsterSpawn(float monsterHealth)
