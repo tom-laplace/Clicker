@@ -27,7 +27,6 @@ public class MonsterController : MonoBehaviour
         health = maxHealth;
         healthBarUI.SetMaxHealth(health);
         healthBarUI.SetHealth(health);
-        Debug.Log("Monster health: " + health);
     }
 
     // Update is called once per frame
@@ -43,6 +42,11 @@ public class MonsterController : MonoBehaviour
         {
             Destroy(gameObject);
             gameManager.HandleMonsterSpawn();
+        }
+
+        if (Time.frameCount % 60 == 0 && characterController.passiveDamage > 0)
+        {
+            TakeDamage(characterController.passiveDamage);
         }
     }
 

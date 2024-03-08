@@ -10,6 +10,8 @@ public class CharacterController : MonoBehaviour
 
     public float money;
 
+    public float passiveDamage;
+
     public GameManager gameManager;
 
     private TMPro.TextMeshProUGUI moneyText;
@@ -22,6 +24,7 @@ public class CharacterController : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         damage = 10;
+        passiveDamage = 0;
         money = 0;
         moneyText = GameObject.Find("MoneyAmount").GetComponent<TMPro.TextMeshProUGUI>();
         moneyText.text = money.ToString();
@@ -33,9 +36,17 @@ public class CharacterController : MonoBehaviour
         
     }
 
-    private void upgradeAttack()
+    public void upgradeAttack()
     {
-        damage += 10;
+        damage *= 1.1f;
+    }   
+
+    public void upgradePassiveDamage()
+    {
+        if(passiveDamage == 0){
+            passiveDamage = 10;
+        }
+        passiveDamage *= 1.2f;
     }
 
     public void EarnMoney()
@@ -43,7 +54,13 @@ public class CharacterController : MonoBehaviour
         if(money == 0){
             money = gameManager.level;
         }
-        money += gameManager.level * 1.1f;
+        money += gameManager.level * 1.2f;
+        moneyText.text = Math.Round(money).ToString();
+    }
+
+    public void LoseMoney(float amount)
+    {
+        money -= amount;
         moneyText.text = Math.Round(money).ToString();
     }
 }
