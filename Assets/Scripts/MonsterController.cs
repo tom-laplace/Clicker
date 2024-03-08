@@ -36,6 +36,7 @@ public class MonsterController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             TakeDamage(characterController.damage);
+            characterController.GetComponent<Animator>().SetTrigger("Attack");
         }
 
         if(health <= 0)

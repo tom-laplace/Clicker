@@ -22,11 +22,31 @@ public class BiomeController : MonoBehaviour
                 monsters = Resources.LoadAll<GameObject>("Prefabs/GolemLand/Monsters");
                 boss = Resources.LoadAll<GameObject>("Prefabs/GolemLand/Boss");
                 break;
+            case 2:
+                monsters = Resources.LoadAll<GameObject>("Prefabs/WarriorsLand/Monsters");
+                boss = Resources.LoadAll<GameObject>("Prefabs/WarriorsLand/Boss");
+                break;
             default:
                 monsters = Resources.LoadAll<GameObject>("Prefabs/GothicLand/Monsters");
                 boss = Resources.LoadAll<GameObject>("Prefabs/GothicLand/Boss"); 
                 this.biomeLevel = 0;
                 break;
+        }
+        LoadBackgroundByBiomeLevel();
+    }
+
+    private GameObject FindBiomeBackgroundByBiomeLevel()
+    {
+        return GameObject.Find("Background" + biomeLevel);
+    }
+
+    private void LoadBackgroundByBiomeLevel()
+    {
+        GameObject background = FindBiomeBackgroundByBiomeLevel();
+        Debug.Log("Background: " + background);
+        if (background != null)
+        {
+            background.SetActive(true);
         }
     }
 }
