@@ -32,5 +32,21 @@ public class BiomeController : MonoBehaviour
                 this.biomeLevel = 0;
                 break;
         }
+        LoadBackgroundByBiomeLevel();
+    }
+
+    private GameObject FindBiomeBackgroundByBiomeLevel()
+    {
+        return GameObject.Find("Background" + biomeLevel);
+    }
+
+    private void LoadBackgroundByBiomeLevel()
+    {
+        GameObject background = FindBiomeBackgroundByBiomeLevel();
+        Debug.Log("Background: " + background);
+        if (background != null)
+        {
+            background.SetActive(true);
+        }
     }
 }
