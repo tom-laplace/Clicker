@@ -38,15 +38,15 @@ public class CharacterController : MonoBehaviour
 
     public void upgradeAttack()
     {
-        damage *= 1.1f;
+        damage *= 1.2f;
     }   
 
     public void upgradePassiveDamage()
     {
+        passiveDamage *= 1.2f;
         if(passiveDamage == 0){
             passiveDamage = 10;
         }
-        passiveDamage *= 1.2f;
     }
 
     public void EarnMoney()

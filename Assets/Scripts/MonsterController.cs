@@ -57,4 +57,9 @@ public class MonsterController : MonoBehaviour
         health = Mathf.Clamp(health, 0, maxHealth);
         healthBarUI.SetHealth(health);
     }
+
+    public void DestroyMonster()
+    {
+        Destroy(gameObject);
+    }
 }
